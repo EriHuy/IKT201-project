@@ -1,0 +1,57 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = "Update Product";
+    Layout = "_Layout";
+}
+
+<h2>Update Product</h2>
+
+<form method="get">
+    <div class="row mb-3">
+        <label asp-for="ProductId" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-1">
+            <input asp-for="ProductId" class="form-control" id="ProductId">
+            <span asp-validation-for="ProductId" class="text-danger"></span>
+        </div>
+        <div class="col-sm-1"> 
+            <input type="submit" class="btn btn-primary" value="Get product" id="Submit">
+        </div>
+    </div>
+</form>
+
+<form method="post">
+    
+    <div class="row mb-3">
+        <label asp-for="ProductName" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <input asp-for="ProductName" class="form-control" id="ProductName">
+            <span asp-validation-for="ProductName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Price" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <input asp-for="Price" class="form-control" id="Price">
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <textarea asp-for="Description" class="form-control" id="Description" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label asp-for="ImageUrl" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <input asp-for="ImageUrl" class="form-control" id="ImageUrl">
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        </div>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Update" id="Submit">
+</form>
+
+

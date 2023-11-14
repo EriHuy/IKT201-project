@@ -1,0 +1,23 @@
+﻿#ProductLayout{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    margin: 10px; 
+    padding: 10px;
+    border: 1px solid;
+}
+
+.images{
+    height: 100px;
+    width: 100px;
+}
+
+#ProductId{
+    width: 100px;
+}
+
+#Price{
+    width: 100px;    
+}

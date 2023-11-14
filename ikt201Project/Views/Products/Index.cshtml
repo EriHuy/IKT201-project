@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<Product>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="ProductLayout">
+    @foreach (var Product in Model)
+    {
+        <div class="product">
+            <label>@Product.ProductName</label><br/>
+            <img class="images" src="@Product.ImageUrl" alt="Image Description">
+            @Product.Price kr @Product.Description
+            <a asp-action="Update" asp-route-id="@Product.ProductId">Update</a>
+            <form asp-action="Delete" asp-route-productId="@Product.ProductId" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    }
+</div>
