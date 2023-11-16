@@ -6,6 +6,13 @@
     ViewData["Title"] = "Home Page";
 }
 
+<form method="get" asp-action="Search" asp-controller="Products">
+    <div id="Search">
+        <input type="text" id="searchString" name="searchString">
+        <button type="submit">Search</button>
+    </div>
+</form>
+
 <div id="ProductLayout">
     @foreach (var Product in Model)
     {

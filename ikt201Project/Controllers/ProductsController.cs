@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ikt201Project.Data;
 using ikt201Project.Models;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace ikt201Project.Controllers;
 
@@ -103,5 +104,19 @@ public class ProductsController : Controller
 
         return RedirectToAction(nameof(Index));
     }
-    
+
+    [HttpGet]
+    public IActionResult Search(string searchString)
+    {
+        var products = _db.Products.ToList();
+
+        if (!string.IsNullOrEmpty(searchString))
+        {
+            products = products.Where(p => p.ProductName.Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
+
+        }
+
+        return View("Index", products);
+    }
+
 }
