@@ -7,16 +7,18 @@ public class Cart
 {
     public Cart(){}
 
-    public Cart(int id, string name, decimal price, int quantity)
+    public Cart(int productId, string name, decimal price, int quantity, string imageUrl)
     {
-        Id = id;
+        ProductId = productId;
         ProductName = name;
         Price = price;
         Quantity = quantity;
+        ImageUrl = imageUrl;
     }
-    public int Id { get; set; }
+    [Key]
+    public int ProductId { get; set; }
     public string ProductName { get; set; } = string.Empty;
     public decimal Price { get; set; }
     public int Quantity { get; set; }
-    
+    public string ImageUrl { get; set; }
 }

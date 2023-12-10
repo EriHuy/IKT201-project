@@ -8,6 +8,7 @@ namespace ikt201Project.Controllers;
 
 public class ProductsController : Controller
 {
+    
     private readonly ApplicationDbContext _db;
 
     public ProductsController(ApplicationDbContext db)
@@ -29,6 +30,7 @@ public class ProductsController : Controller
     [HttpPost]
     public IActionResult Add(Product product)
     {
+    
         bool isDuplicateProductId = _db.Products.Any(p => p.ProductId == product.ProductId);
 
         if (isDuplicateProductId)

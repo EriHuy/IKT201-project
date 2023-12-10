@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cZUkRU+mouV3N61iTNH96AAYcqwXKQazNrBcTjDIHzA=",
+  "Hash": "68b12/B6WhMbV+XN1FCDXa7q1Dywpf6yjAEFT7GkblQ=",
   "Source": "ikt201Project",
   "BasePath": "_content/ikt201Project",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\js\\generateId.js",
+      "SourceId": "ikt201Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\",
+      "BasePath": "_content/ikt201Project",
+      "RelativePath": "js/generateId.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\generateId.js"
     },
     {
       "Identity": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\js\\site.js",

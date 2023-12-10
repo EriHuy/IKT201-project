@@ -9,12 +9,12 @@
 
 <form method="post">
     <div class="row mb-3">
-            <label asp-for="ProductId" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-3">
-                <input asp-for="ProductId" class="form-control" id="ProductId">
-                <span asp-validation-for="ProductId" class="text-danger"></span>
-            </div>
+        <label asp-for="ProductId" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <input asp-for="ProductId" class="form-control" id="ProductId">
+            <span asp-validation-for="ProductId" class="text-danger"></span>
         </div>
+    </div>
     <div class="row mb-3">
         <label asp-for="ProductName" class="col-sm-2 col-form-label"></label>
         <div class="col-sm-3">
@@ -30,19 +30,20 @@
         </div>
     </div>
     <div class="row mb-3">
-            <label asp-for="Description" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-3">
-                <textarea asp-for="Description" class="form-control" id="Description" rows="4"></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
+        <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <textarea asp-for="Description" class="form-control" id="Description" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
+    </div>
     <div class="row mb-3">
-            <label asp-for="ImageUrl" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-3">
-                <input asp-for="ImageUrl" class="form-control" id="ImageUrl">
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>
+        <label asp-for="ImageUrl" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-3">
+            <input asp-for="ImageUrl" class="form-control" id="ImageUrl">
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
         </div>
+    </div>
 
     <input type="submit" class="btn btn-primary" value="Add" id="Submit">
+    <button type="button" class="btn btn-secondary" id="generateRandomId">Generate ID</button>
 </form>

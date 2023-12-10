@@ -20,9 +20,15 @@
             <label>@Product.ProductName</label><br/>
             <img class="images" src="@Product.ImageUrl" alt="Image Description">
             @Product.Price kr @Product.Description
-            <a asp-action="Update" asp-route-id="@Product.ProductId">Update</a>
             <form asp-action="Delete" asp-route-productId="@Product.ProductId" method="post">
                 <button type="submit">Delete</button>
+            </form>
+            <form asp-action="Update" asp-route-productId="@Product.ProductId" method="post">
+                <button type="submit">Update</button>
+            </form> 
+            <form asp-controller="Cart" asp-action="AddItem"  method="post">
+                  <input type="hidden" name="productId" value="@Product.ProductId">
+                    <button type="submit">Add to Cart</button>
             </form>
         </div>
     }
