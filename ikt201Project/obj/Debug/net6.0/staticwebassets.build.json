@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vDsR8aiMpAQv5wwJ22FutY8XUcXZY36gMb4bRfO0/cw=",
+  "Hash": "xvC2ewI3jzDr8mejeJ5JBOPS0YWvSdxe1CO8p3bftWw=",
   "Source": "ikt201Project",
   "BasePath": "_content/ikt201Project",
   "Mode": "Default",
@@ -1154,6 +1154,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\images.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\Images\\ledlights.jpg",
+      "SourceId": "ikt201Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\",
+      "BasePath": "_content/ikt201Project",
+      "RelativePath": "Images/ledlights.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ledlights.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\Images\\waterbottle.jpg",
+      "SourceId": "ikt201Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\",
+      "BasePath": "_content/ikt201Project",
+      "RelativePath": "Images/waterbottle.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\waterbottle.jpg"
     },
     {
       "Identity": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\wwwroot\\js\\generateId.js",

@@ -27,10 +27,11 @@ public class ProductsController : Controller
     {
         return View(new Product());
     }
+    
+    // Adding product
     [HttpPost]
     public IActionResult Add(Product product)
     {
-    
         bool isDuplicateProductId = _db.Products.Any(p => p.ProductId == product.ProductId);
 
         if (isDuplicateProductId)

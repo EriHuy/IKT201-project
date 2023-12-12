@@ -37,6 +37,7 @@
             function CheckImageString(ImageString) {
                 const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
                 let image
+                
                 if(urlPattern.test(ImageString)){
                     image = ImageString
                     document.getElementById('@Product.ProductId').src=image;
