@@ -17,7 +17,7 @@
     @foreach (var Product in Model)
     {
         <div class="product">
-            <img class="images" src="@Product.ImageUrl" alt="Image Description">
+            <img class="images" id="@Product.ProductId" alt="Image Description">
             <div class="description">
                 <label class="title">@Product.ProductName</label><br/>
                 @Product.Description <br/>
