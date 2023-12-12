@@ -51,6 +51,8 @@ public class ProductsController : Controller
         
         return RedirectToAction(nameof(Index));
     }
+    
+    // Get the product for the productId given
     [HttpGet]
     public IActionResult Update(int productId)
     {
@@ -64,7 +66,8 @@ public class ProductsController : Controller
         
         return View(existingProduct);
     }
-
+    
+    // Updates the product
     [HttpPost]
     public IActionResult Update(int productId, Product updatedProduct)
     {

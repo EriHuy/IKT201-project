@@ -18,18 +18,35 @@
     {
         <div class="product">
             <label>@Product.ProductName</label><br/>
-            <img class="images" src="@Product.ImageUrl" alt="Image Description">
+            <img class="images" id="@Product.ProductId" alt="Image Description">
             @Product.Price kr @Product.Description
             <form asp-action="Delete" asp-route-productId="@Product.ProductId" method="post">
                 <button type="submit">Delete</button>
             </form>
             <form asp-action="Update" asp-route-productId="@Product.ProductId" method="post">
                 <button type="submit">Update</button>
-            </form> 
-            <form asp-controller="Cart" asp-action="AddItem"  method="post">
-                  <input type="hidden" name="productId" value="@Product.ProductId">
-                    <button type="submit">Add to Cart</button>
+            </form>
+            <form asp-controller="Cart" asp-action="AddItem" method="post">
+                <input type="hidden" name="productId" value="@Product.ProductId">
+                <button type="submit">Add to Cart</button>
             </form>
         </div>
+
+        // Function for checking if image is a address http, https, ftp or in a local folder 
+        <script>
+            function CheckImageString(ImageString) {
+                const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+                let image
+                if(urlPattern.test(ImageString)){
+                    image = ImageString
+                    document.getElementById('@Product.ProductId').src=image;
+                }else{
+                    image = "Images/" + ImageString
+                    document.getElementById('@Product.ProductId').src=image;
+                }
+            }
+            CheckImageString("@Product.ImageUrl")
+        </script>
     }
 </div>
+

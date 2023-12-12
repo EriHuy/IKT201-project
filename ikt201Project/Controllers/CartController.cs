@@ -19,12 +19,11 @@ public class CartController : Controller
         CheckItem(_db);
         
         var cart = _db.Carts.ToList();
+        ViewBag.TotalCost = TotalCost();
         
         return View(cart);
     }
-        
-    
-    
+
     [HttpPost]
     public IActionResult AddItem(int productId)
     {
@@ -60,7 +59,8 @@ public class CartController : Controller
 
         return RedirectToAction(nameof(Index));
     }
-
+    
+    // Changes the item quantity
     public IActionResult UpdateItem(int productId, int quantity)
     {
         var existingProduct = _db.Carts.Find(productId);
@@ -74,6 +74,7 @@ public class CartController : Controller
         return RedirectToAction(nameof(Index));
     }
     
+    // Updates the items in cart to synchronizes with the product id
     private static void UpdateCartItems(ApplicationDbContext db)
     {
         var carts = db.Carts.ToList();
@@ -91,7 +92,8 @@ public class CartController : Controller
         }
         db.SaveChanges();
     }
-
+    
+    // Check if the item exist 
     private void CheckItem(ApplicationDbContext db)
     {
         var cart = _db.Carts.ToList();
@@ -111,5 +113,19 @@ public class CartController : Controller
             }
         }
         _db.SaveChanges();
+    }
+    
+    // Calculates the total value of the cart
+    public decimal TotalCost()
+    {
+        var cart = _db.Carts.ToList();
+        decimal totalcost = 0;
+        
+        foreach (var carts in cart)
+        {   
+            totalcost += carts.Price * carts.Quantity;
+        }
+
+        return totalcost;
     }
 }
