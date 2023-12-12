@@ -18,7 +18,7 @@
             <tr>
                 <td>
                     <div class="cartInfo">
-                        <img class="images" src="@Cart.ImageUrl" alt="Image Description"><br/>
+                        <img class="images" id="@Cart.ProductId" alt="Image Description"><br/>
                         <div>
                             <label class="title">@Cart.ProductName</label> <br/>
                             <div class="descrip">   
@@ -39,21 +39,21 @@
                 </td>
             </tr>
             
-        // Function for checking if image is a address http, https, ftp or in a local folder 
-        <script>
-            function CheckImageString(ImageString) {
-                const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-                
-                if(urlPattern.test(ImageString)){
-                    let image = ImageString
-                    document.getElementById('@Cart.ProductId').src=image;
-                }else{
-                    let image = "Images/" + ImageString
-                    document.getElementById('@Cart.ProductId').src=image;
+            // Function for checking if image is a address http, https, ftp or in a local folder 
+            <script>
+                function CheckImageString(ImageString) {
+                    const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+                    
+                    if(urlPattern.test(ImageString)){
+                        let image = ImageString
+                        document.getElementById('@Cart.ProductId').src=image;
+                    }else{
+                        let image = "Images/" + ImageString
+                        document.getElementById('@Cart.ProductId').src=image;
+                    }
                 }
-            }
-            CheckImageString("@Cart.ImageUrl")
-        </script>
+                CheckImageString("@Cart.ImageUrl")
+            </script>
 
         }
     </table>
