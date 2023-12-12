@@ -4,39 +4,62 @@
     ViewData["Title"] = "Home Page";
 }
 
-@foreach (var Cart in Model)
-{
-    <div>
-        <table>
-            <th>
-                @Cart.ProductName @Cart.Price kr Quantity @Cart.Quantity <img class="images" alt="Image Description" id="@Cart.ProductId">
-            </th>
-            <th>
-                <form asp-action="RemoveItem" asp-route-productId="@Cart.ProductId" method="post">
-                    <button type="submit">Remove</button>
-                </form>
-            </th>
-            <th>
-                <form asp-action="UpdateItem" asp-route-productId="@Cart.ProductId" method="post">
-                    <input type="number" name="quantity" value="@Cart.Quantity" min="1"/>
-                </form>
-            </th>
-        </table>
-    </div>
-     
-    // Function for checking if image is a address http, https, ftp or in a local folder 
-    <script>
-        function CheckImageString(ImageString) {
-            const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
-            if(urlPattern.test(ImageString)){
-                let image = ImageString
-                document.getElementById('@Cart.ProductId').src=image;
-            }else{
-                let image = "Images/" + ImageString
-                document.getElementById('@Cart.ProductId').src=image;
+
+<div class="cartPage">
+      
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>   
+        @foreach (var Cart in Model)
+        {
+            <tr>
+                <td>
+                    <div class="cartInfo">
+                        <img class="images" src="@Cart.ImageUrl" alt="Image Description"><br/>
+                        <div>
+                            <label class="title">@Cart.ProductName</label> <br/>
+                            <div class="descrip">   
+                                <form asp-action="RemoveItem" asp-route-productId="@Cart.ProductId" method="post">
+                                    <button type="submit">Remove</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <form asp-action="UpdateItem" asp-route-productId="@Cart.ProductId" method="post">
+                        <input type="number" name="quantity" value="@Cart.Quantity" min="1"/>
+                    </form>
+                </td>
+                <td>
+                    <label>@Cart.Quantity x @Cart.Price kr</label> 
+                </td>
+            </tr>
+            
+        // Function for checking if image is a address http, https, ftp or in a local folder 
+        <script>
+            function CheckImageString(ImageString) {
+                const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+                
+                if(urlPattern.test(ImageString)){
+                    let image = ImageString
+                    document.getElementById('@Cart.ProductId').src=image;
+                }else{
+                    let image = "Images/" + ImageString
+                    document.getElementById('@Cart.ProductId').src=image;
+                }
             }
+            CheckImageString("@Cart.ImageUrl")
+        </script>
+
         }
-        CheckImageString("@Cart.ImageUrl")
-    </script>
-}
-<p>Total Cost: @ViewBag.TotalCost</p>
+    </table>
+    
+    <div class="Total">
+        <p>Total Cost: @ViewBag.TotalCost kr</p>
+    </div>
+
+</div>

@@ -7,9 +7,9 @@
 }
 
 <form method="get" asp-action="Search" asp-controller="Products">
-    <div id="Search">
+    <div class="search" id="Search">
         <input type="text" id="searchString" name="searchString">
-        <button type="submit">Search</button>
+        <button type="submit">Search</button><br/>
     </div>
 </form>
 
@@ -17,27 +17,31 @@
     @foreach (var Product in Model)
     {
         <div class="product">
-            <label>@Product.ProductName</label><br/>
-            <img class="images" id="@Product.ProductId" alt="Image Description">
-            @Product.Price kr @Product.Description
-            <form asp-action="Delete" asp-route-productId="@Product.ProductId" method="post">
-                <button type="submit">Delete</button>
-            </form>
-            <form asp-action="Update" asp-route-productId="@Product.ProductId" method="post">
-                <button type="submit">Update</button>
-            </form>
-            <form asp-controller="Cart" asp-action="AddItem" method="post">
-                <input type="hidden" name="productId" value="@Product.ProductId">
-                <button type="submit">Add to Cart</button>
-            </form>
+            <img class="images" src="@Product.ImageUrl" alt="Image Description">
+            <div class="description">
+                <label class="title">@Product.ProductName</label><br/>
+                @Product.Description <br/>
+                <label class="priceProduct">@Product.Price kr</label>
+                <div class="box">
+                    <form asp-action="Delete" asp-route-productId="@Product.ProductId" method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form asp-action="Update" asp-route-productId="@Product.ProductId" method="post">
+                        <button type="submit">Update</button>
+                    </form>
+                    <form asp-controller="Cart" asp-action="AddItem" method="post">
+                        <input type="hidden" name="productId" value="@Product.ProductId">
+                        <button type="submit">Add to Cart</button>
+                    </form>                              
+                </div>
+            </div>
         </div>
-
+        
         // Function for checking if image is a address http, https, ftp or in a local folder 
         <script>
             function CheckImageString(ImageString) {
                 const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
                 let image
-                
                 if(urlPattern.test(ImageString)){
                     image = ImageString
                     document.getElementById('@Product.ProductId').src=image;
