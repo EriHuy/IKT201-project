@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\ikt201Project.csproj": {}
+    "C:\\Users\\Abdul\\OneDrive\\Skrivebord\\ikt201-New\\IKT201-project\\ikt201Project\\ikt201Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\ikt201Project.csproj": {
+    "C:\\Users\\Abdul\\OneDrive\\Skrivebord\\ikt201-New\\IKT201-project\\ikt201Project\\ikt201Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\ikt201Project.csproj",
+        "projectUniqueName": "C:\\Users\\Abdul\\OneDrive\\Skrivebord\\ikt201-New\\IKT201-project\\ikt201Project\\ikt201Project.csproj",
         "projectName": "ikt201Project",
-        "projectPath": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\ikt201Project.csproj",
-        "packagesPath": "C:\\Users\\EricH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EricH\\ikt201g22h\\Project\\ikt201Project\\ikt201Project\\obj\\",
+        "projectPath": "C:\\Users\\Abdul\\OneDrive\\Skrivebord\\ikt201-New\\IKT201-project\\ikt201Project\\ikt201Project.csproj",
+        "packagesPath": "C:\\Users\\Abdul\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abdul\\OneDrive\\Skrivebord\\ikt201-New\\IKT201-project\\ikt201Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\EricH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
