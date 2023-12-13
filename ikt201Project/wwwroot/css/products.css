@@ -20,6 +20,7 @@
 .product .description{
     padding: 5px 20px;
     opacity: 0.8;
+    width: 350px;
 }
 
 .product .description .title{
